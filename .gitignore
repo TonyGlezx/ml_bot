@@ -1,26 +1,26 @@
 #Env variables
 .env
 #Node modules
-server/node_modules
-www/node_modules
+/server/node_modules
+/www/node_modules
 #Npm packages files
-server/package.json
-server/package-lock.json
-www/package.json
-www/package-lock.json
+/server/package.json
+/server/package-lock.json
+/www/package.json
+/www/package-lock.json
 #__pychache__
-cron/__pychache__
+/cron/__pychache__
 #Cron assets
-cron/assets/*
+/cron/assets/*
 !cron/assets/.gitkeep
 #Logs
-logs/*
+/logs/*
 !logs/.gitkeep
 #HTML files
-assets/html/*
+/assets/html/*
 !assets/html/.gitkeep
 #json files
-api/json/products-all.json
+/api/json/*
 !api/json/.gitkeep
 
 
