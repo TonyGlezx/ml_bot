@@ -30,6 +30,7 @@ while True and not runningCounter:
    mainCounter = 0
    growth={}
    for product in main:   
+      print("Ran")
       with open(product["HTML"], 'r') as f:
          contents = f.read()
          soup = BeautifulSoup(contents, 'lxml')

@@ -8,6 +8,8 @@ import html
 from datetime import datetime
 from uuid6 import uuid8
 
+startFrom=2891
+
 xmlPaths = ["5293607_236761.xml", "5293607_236761_1.xml", "5293607_236761_2.xml", "5293607_index.xml"]
 airtable = Airtable("appOtnSc5mDk7of3k", "Main", "keykhRxXdvcVswLvG")
 quickscraper_client = QuickScraper('geG3heVV7qajdW3eaIQKYhaqo')
@@ -38,10 +40,11 @@ for xmlPath in xmlPaths:
  locs = bs_content.find_all("loc")
 
  for loc in locs:
+   print("Scraping petitions done so far "+str(scraperCounter))       
+   scraperCounter = scraperCounter + 1    
+   if scraperCounter > startFrom:
     url = loc.text        
-    response = quickscraper_client.getHtml(url)
-    print("Scraping petitions done so far "+str(scraperCounter))
-    scraperCounter = scraperCounter + 1    
+    response = quickscraper_client.getHtml(url)    
     if response.status_code == 200:       
        #cleanHtml = html.escape(response.text, quote=True)       
        cnx = mysql.connector.connect(user='root', password='',host='127.0.0.1',database='htmls')

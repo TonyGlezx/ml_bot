@@ -18,7 +18,10 @@ logs/*
 !logs/.gitkeep
 #HTML files
 assets/html/*
-assets/html/.gitkeep
+!assets/html/.gitkeep
+#json files
+api/json/products-all.json
+!api/json/.gitkeep
 
 
 
