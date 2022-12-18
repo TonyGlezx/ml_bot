@@ -1,0 +1,23 @@
+#Env variables
+.env
+#Node modules
+server/node_modules
+www/node_modules
+#Npm packages files
+server/package.json
+server/package-lock.json
+www/package.json
+www/package-lock.json
+#__pychache__
+cron/__pychache__
+#Cron assets
+cron/assets/*
+!cron/assets/.gitkeep
+#Logs
+logs/*
+!logs/.gitkeep
+
+
+
+
+
